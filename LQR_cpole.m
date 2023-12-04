@@ -73,53 +73,53 @@ plot(t2, y2(:, 2));
 ylabel('Pendulum Velocity (rad/s)');
 xlabel('Time (s)');
 
-% % Call animateCartPole to visualize the cart-pole animation
+% Call animateCartPole to visualize the cart-pole animation
 % animateCartPole([y1(:, 1), y1(:, 2)], 0.3); % Use the pendulum length L from your system
 % 
-% % Define function for cart-pole animation
+% Define function for cart-pole animation
 % function animateCartPole(states, L)
-%     % Extract states
+%     Extract states
 %     x = states(:, 1);     % Cart position
 %     theta = states(:, 2); % Pendulum angle
 % 
-%     % Define the dimensions of the cart and pendulum
+%     Define the dimensions of the cart and pendulum
 %     cartWidth = 0.4;       % Adjust as needed
 %     cartHeight = 0.2;      % Adjust as needed
 % 
-%     % Create a figure for animation
+%     Create a figure for animation
 %     figure;
 % 
-%     % Iterate through time steps for animation
+%     Iterate through time steps for animation
 %     for i = 1:length(x)
-%         % Cart position
+%         Cart position
 %         cartX = x(i) - cartWidth/2;
 %         cartY = 0;
 % 
-%         % Pendulum position
+%         Pendulum position
 %         pendulumX = x(i);
 %         pendulumY = 0;
 % 
-%         % Draw the cart
+%         Draw the cart
 %         rectangle('Position', [cartX, cartY, cartWidth, cartHeight], 'FaceColor', [0.2, 0.2, 0.8]);
 %         hold on;
 % 
-%         % Draw the pendulum
+%         Draw the pendulum
 %         pendulumXEnd = pendulumX + L * sin(theta(i));
 %         pendulumYEnd = pendulumY - L * cos(theta(i));
 %         line([pendulumX, pendulumXEnd], [pendulumY, pendulumYEnd], 'LineWidth', 3, 'Color', [0.8, 0.2, 0.2]);
 % 
-%         % Set axis limits
+%         Set axis limits
 %         axis([x(i) - 2, x(i) + 2, -L - 1, L + 1]);
 % 
-%         % Add labels and title
+%         Add labels and title
 %         xlabel('Cart Position');
 %         ylabel('Pendulum Height');
 %         title('Cart-Pole Animation');
 % 
-%         % Pause for animation
+%         Pause for animation
 %         pause(0.01);
 % 
-%         % Clear the figure for the next frame
+%         Clear the figure for the next frame
 %         clf;
 %     end
 % end
