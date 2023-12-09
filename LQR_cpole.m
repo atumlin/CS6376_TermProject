@@ -24,7 +24,7 @@ Q(3, 3) = 100;
 R = 1;
 
 % Calculate the LQR gain matrix K
-K = lqr(A, B, Q, R);
+K = lqr(A, B, Q, R)
 
 % Closed-loop system dynamics
 Ac = A - B * K;
